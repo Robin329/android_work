@@ -1,6 +1,7 @@
 cc_binary {
     name: "aw_main",
-    srcs: ["main.cpp"],
+    srcs: ["aw_main.cpp",
+            ],
 
     shared_libs: [
         "libcutils",
@@ -13,13 +14,26 @@ cc_binary {
         "libhidlbase",
     ],
     cflags: [
-        "-Wall",
-        "-Werror",
-        "-Wunused",
-        "-Wunreachable-code",
         "-g",
         "-O0",
+        "-Werror",
+        "-Wall",
+        "-Wunused-parameter",
+        "-Wno-unused",
     ],
+    cppflags: [
+        // "-D__STDINT_LIMITS"
+        "-DLOG_TAG=\"aw\"",
+        "-Werror",
+        "-Wall",
+        "-Wunused-parameter",
+        "-Wno-unused",
+        ],
+}
 
-
+cc_library_headers {
+    name: "libaw_headers",
+    vendor_available: true,
+    native_bridge_supported: true,
+    export_include_dirs: ["."],
 }

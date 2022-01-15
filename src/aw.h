@@ -14,16 +14,4 @@
  * limitations under the License.
  */
 
-#include <android-base/strings.h>
-#include <gtest/gtest.h>
-#include <signal.h>
-#include <string.h>
 
-using namespace android::base;
-using namespace std;
-
-int main(int argc, char* const argv[]) {
-    cout << "android work test ...\n"
-         << endl;
-    return 0;
-}
