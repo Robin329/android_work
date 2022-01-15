@@ -1,0 +1,25 @@
+cc_binary {
+    name: "aw_main",
+    srcs: ["main.cpp"],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libbinder",
+        "libhwui",
+        "libui",
+        "libgui",
+        "liblog",
+        "libhidlbase",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+        "-Wunreachable-code",
+        "-g",
+        "-O0",
+    ],
+
+
+}
