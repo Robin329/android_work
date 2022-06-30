@@ -27,8 +27,14 @@
 
 using namespace android::base;
 using namespace std;
+using namespace android;
 
 int main(int argc, char* const argv[]) {
     ALOGE("android work test ..., argc:%d argv:%s\n", argc, argv[0]);
+    ProcessState::self()->startThreadPool();  //启动线程池
+    IPCThreadState::self()->joinThreadPool(); //把主线程加入线程池
+    while(1) {
+        ;
+    }
     return 0;
 }
