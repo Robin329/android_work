@@ -29,11 +29,12 @@ cc_binary {
         "-Wunused-parameter",
         "-Wno-unused",
         ],
+
 }
 
 cc_library_headers {
     name: "libaw_headers",
     vendor_available: true,
-    native_bridge_supported: true,
     export_include_dirs: ["."],
+
 }

@@ -17,6 +17,9 @@ cc_test {
     srcs: [
         "aw_test.cpp",
     ],
+        header_libs: [
+        "libaw_headers",
+    ],
     shared_libs: [
         "libbase",
         "libcutils",
@@ -28,7 +31,5 @@ cc_test {
         "-g",
         "-O0",
     ],
-    export_shared_lib_headers: [
-        "libaw_headers",
-    ],
+
 }
