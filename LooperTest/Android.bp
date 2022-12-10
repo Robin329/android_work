@@ -1,0 +1,36 @@
+cc_defaults {
+    name: "LooperTest_defaults",
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+        "-Wunreachable-code",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libui",
+        "libgui",
+    ],
+}
+
+// LooperTest executable
+// =========================================================
+
+cc_binary {
+    name: "looper-test",
+    defaults: ["LooperTest_defaults"],
+    srcs: [
+        "LooperTest.cpp",
+    ],
+
+    cflags: [
+        "-Wno-deprecated-declarations",
+    ],
+}
+
